@@ -11,8 +11,9 @@ defmodule AskimetEx.MixProject do
       name: "AskimetEx",
       description: @description,
       source_url: "https://github.com/mijailr/askimet_ex",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.7",
+      docs: docs(),
       package: package(),
       deps: deps()
     ]
@@ -30,7 +31,7 @@ defmodule AskimetEx.MixProject do
 
       # Test and dev dependencies
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.18.0", only: :dev}
+      {:ex_doc, "~> 0.19.0", only: :dev}
     ]
   end
 
@@ -41,6 +42,15 @@ defmodule AskimetEx.MixProject do
       links: %{
         GitHub: "https://github.com/mijailr/askimet_ex"
       }
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      extras: [
+        "README.md"
+      ]
     ]
   end
 end

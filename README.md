@@ -1,21 +1,35 @@
 # AskimetEx
 
-**TODO: Add description**
+[AskimetEx](https://hex.pm/packages/askimet_ex) is a package for use TypePad's AntiSpam services or Askimet endpoints in elixir projects.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `askimet_ex` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `askimet_ex` 
+to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:askimet_ex, "~> 0.1.0"}
+    {:askimet_ex, "~> 0.1.1"}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/askimet_ex](https://hexdocs.pm/askimet_ex).
+Read the [Documentation](https://hexdocs.pm/askimet_ex)
 
+## Usage
+
+Use the module with parameters:
+
+- Askimet API Key
+- Blog URL
+- User IP Address
+- Comment or message
+
+```elixir
+AskimetEx.check_spam(api_key, blog_url, user_ip, comment)
+```
+
+## Collaborate
+
+If you want to collaborate, please make a pull request.
